@@ -1,0 +1,81 @@
+# ============================================
+# Dependencies
+# ============================================
+node_modules/
+.pnp
+.pnp.js
+
+# ============================================
+# Environment & secrets (JANGAN di-commit)
+# ============================================
+.env
+.env.*
+!.env.example
+
+# ============================================
+# Next.js (frontend)
+# ============================================
+frontend/.next/
+frontend/out/
+frontend/next-env.d.ts
+*.tsbuildinfo
+
+# ============================================
+# Hasil clip & file sementara (backend/worker)
+# ============================================
+backend/data/
+data/
+*.mp4
+*.mp3
+*.m4a
+*.webm
+*.mkv
+*.part
+*.ytdl
+*.temp
+
+# ============================================
+# Redis / Docker volume lokal
+# ============================================
+dump.rdb
+appendonly.aof
+
+# ============================================
+# Log & debug
+# ============================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ============================================
+# Tool bantu lokal (hasil scan project)
+# ============================================
+hasil_scan_.txt
+# scan_project.py   # hilangkan tanda '#' jika skrip ini tidak ingin ikut dipublish
+
+# ============================================
+# OS
+# ============================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================
+# Editor / IDE
+# ============================================
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# ============================================
+# Lain-lain
+# ============================================
+coverage/
+.cache/
+.turbo/
+*.tgz

@@ -1,0 +1,32 @@
+:root { --bg:#e8ecf1; --panel:#f8fafc; --ink:#1b2430; --muted:#5d6b7c; --line:#c9d2dd; --accent:#2c4fd8; --clip:#f0a31a; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 "Avenir Next","Segoe UI",system-ui,sans-serif; }
+main { max-width:960px; margin:0 auto; padding:32px 20px 64px; }
+h1 { font-size:2rem; margin:0 0 4px; letter-spacing:-0.02em; }
+.sub { color:var(--muted); margin:0 0 24px; max-width:60ch; }
+.row { display:flex; gap:8px; flex-wrap:wrap; align-items:end; }
+.panel { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:16px; margin-top:16px; }
+label { display:grid; gap:4px; font-size:.85rem; color:var(--muted); }
+input, select { font:inherit; padding:8px 10px; border:1px solid var(--line); border-radius:6px; background:#fff; color:var(--ink); min-width:0; }
+input.url { flex:1 1 320px; }
+input.time { width:104px; }
+button { font:inherit; padding:8px 14px; border-radius:6px; border:1px solid var(--accent); background:var(--accent); color:#fff; cursor:pointer; }
+button.ghost { background:transparent; color:var(--accent); }
+button:disabled { opacity:.5; cursor:not-allowed; }
+:focus-visible { outline:3px solid #8aa2ff; outline-offset:2px; }
+.player { aspect-ratio:16/9; background:#0e141c; border-radius:8px; overflow:hidden; }
+.player iframe { width:100%; height:100%; display:block; }
+.timeline { position:relative; height:22px; margin-top:12px; background:#dbe2ea; border-radius:4px; overflow:hidden; }
+.timeline i { position:absolute; top:0; bottom:0; background:var(--clip); opacity:.9; border-left:2px solid #fff; }
+.clips { list-style:none; padding:0; margin:12px 0 0; display:grid; gap:8px; }
+.clips li { display:flex; gap:12px; align-items:center; justify-content:space-between; border:1px solid var(--line); border-radius:8px; padding:10px 12px; background:#fff; }
+.clips .meta { color:var(--muted); font-variant-numeric:tabular-nums; }
+.err { color:#b3261e; margin:8px 0 0; }
+.ok { color:#1d7a46; }
+@media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+.prog { flex:1; max-width:380px; display:grid; gap:4px; }
+.bar { display:block; height:8px; background:#dbe2ea; border-radius:4px; overflow:hidden; }
+.bar i { display:block; height:100%; background:var(--accent); transition:width .3s; }
+.bar i.indet { width:40%; animation:slide 1.1s infinite ease-in-out; }
+@keyframes slide { 0% { transform:translateX(-100%); } 100% { transform:translateX(250%); } }
+@media (prefers-reduced-motion:reduce) { .bar i.indet { animation:none; width:100%; opacity:.4; } }
